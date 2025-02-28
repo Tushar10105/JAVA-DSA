@@ -4,7 +4,7 @@ public class ArrInsrtAtBeg{
 		Scanner scan=new Scanner(System.in);
 		System.out.print("Size: ");
 		int size=scan.nextInt();
-		int[] arr=new int[size];
+		int[] arr=new int[size+1];
 
 		if (size <= 0) {
 			System.out.println("Invalid size!");
@@ -12,23 +12,19 @@ public class ArrInsrtAtBeg{
 	        }
 
 		System.out.print("ELEMENTS:\n");
-		for(int i=0;i<size;i++){
+		for(int i=1;i<=size;i++){
 			arr[i]=scan.nextInt();
 			}
 
-		int[] newarr= new int[arr.length+1];
 		System.out.print("NEW ELEMENT: ");
 		int element=scan.nextInt();
+		arr[0]=element;
 
-		newarr[0]=element;
 
-		for(int i=0;i<arr.length;i++){
-			newarr[i+1]=arr[i];
-			}
 
 		System.out.print("After INSERTION at the BEGNING:\n");
 
-			for(int i:newarr){
+			for(int i:arr){
 				System.out.print(i+" | ");
 				}
 
